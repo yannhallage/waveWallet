@@ -6,17 +6,15 @@ interface LoginProps {
 
 const Login: React.FC<LoginProps> = ({ onCreateAccount }) => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: "url('/assets/bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Vidéo en arrière-plan */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        autoPlay
-        loop
-        muted
-      >
-        <source src="/videos/vidbg.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la vidéo HTML5.
-      </video>
 
       {/* Voile sombre pour améliorer la lisibilité */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
